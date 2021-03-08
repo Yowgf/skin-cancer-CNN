@@ -1,0 +1,7 @@
+# Project datasets metadata
+
+datasets:
+  0:
+    name: skin_cancer_kaggle
+    source: https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+    origin: https://www.isic-archive.com/#!/topWithHeader/wideContentTop/main

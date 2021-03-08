@@ -1,0 +1,14 @@
+2021-03-06
+Alexander Thomas Mol Holmquist
+
+MD-TP3 project task 4 of phase 1 of CRISP-DM
+--------------------------------------------------------------------
+
+Producing the project plan should maybe be done in steps, while
+building the other tasks. I think this is actually largely the
+result of the whole thought process that underwent the last few
+tasks.
+
+The steps are to be listed in as much detail as possible, at this
+stage. The project plan can be found in the file
+"<root>/doc/cdm/phs1/outputs/project-plan.txt".

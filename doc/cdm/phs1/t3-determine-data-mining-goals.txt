@@ -1,0 +1,19 @@
+2021-03-06
+Alexander Thomas Mol Holmquist
+
+MD-TP3 project task 3 of phase 1 of CRISP-DM
+--------------------------------------------------------------------
+
+The data mining goals. These relate to the business goals described
+in task one.
+
+For the primary objective, the corresponding data mining objective
+is to classify the data such that test error is bound by F-SCORE of:
+
+  F-SCORE = 2 / ((1/precision) + (1/recall)) >= 90% on test data
+  (for example if the precision and recall are both 0.90, you will
+  get a 90% F-SCORE.)
+
+The secondary business objectives are absolutely subjective. As
+such, I will judge them myself, based on base-knowledge found
+through research.

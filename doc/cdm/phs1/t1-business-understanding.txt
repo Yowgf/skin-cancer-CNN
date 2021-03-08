@@ -1,0 +1,57 @@
+2021-03-03
+Alexander Thomas Mol Holmquist
+
+MD-TP3 project task 1 of phase 1 of CRISP-DM
+--------------------------------------------------------------------
+
+I plan to adapt the CRISP-DM model to the college educational
+context as much as possible. In this case though, I will have to
+neglect some recommendations that relate directly to organizational
+issues.
+
+--------------------------------------------------------------------
+
+Area of knowledge at focus by the project: health, medicine,
+oncology, dermatology.
+
+The problem at hand:
+  Generate a benign / malign cancer classifier. That is, we want to
+  be able to tell, from a photo taken by a medical practitioner, if
+  a skin segment of the patient is a malign or a benign cancer.
+  The actual motive behind the project is educational...
+
+There are already many solutions to the problem, including a very
+  powerful machine learning model made by Stanford artificial
+  intelligence laboratory researchers.
+
+Business questions:
+
+  1. (primary objective) What are the key characteristics of a
+  malign cancer, based on the obtained data sample?
+  
+  2. How much can we trust a simple model such as this for detecting
+  cancer? This is a question that could determine the initiative for
+  future data mining projects within a company. I also wanted to
+  know how useful is a model that only has a small dataset to mess
+  around. I mean, if you have 130k examples, you are obviously going
+  to do so much better... but isn't the small one already a big
+  improvement?
+  
+  3. How useful is it to produce a simple model that can test the
+  viability of having a data mining project in an organization? Is
+  it ok to spend, say, one week, developing a simplified version of
+  some model, and using maybe only a subset of the data (remember
+  that the data I proposed is only a subset of a very large sample
+  of cancer images provided by that international organization),
+  just so that the resources of the business are tested? For
+  example, personell qualification, hardware capabilities, data
+  mining team cohesion, data understanding.
+
+Success criteria:
+
+  1. Get a picture or a set of pictures that represent the key
+  features of a malign skin cancer.
+
+  2. Find a satisfactory answer.
+
+  3. Find a satisfactory answer.

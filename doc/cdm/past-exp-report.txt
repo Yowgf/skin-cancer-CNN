@@ -1,0 +1,340 @@
+2021-03-03/2021-03-04
+Alexander Thomas Mol Holmquist
+
+Past experience with usage of CRISP-DM (specially from last project,
+MD-TP2)
+--------------------------------------------------------------------
+
+PAST EXPERIENCE WITH EACH TASK OF CRISP-DM
+
+1.1 Determine business objectives
+
+This, I feel, makes it the first step to know exactly what your
+objectives are. It is like a service provider of some sort, when he
+comes to a calling place, the first thing he has to do is assess the
+needs of the client, as well as determining the budget of time and
+money and any other resource that may be needed to accomplish the
+objectives.
+
+It doesn't seem hard, though, and I haven't had much trouble with
+this task in the past.
+
+There are three outputs of this task. Each one of them is essential.
+
+- Background (organization business situation)
+- Business objectives (primary and peripheral objectives)
+- Business success criteria (stablish what are the metrics to
+  determinie wheter we were successful or not. If the metric is
+  subjective, one must determine also the person who is to make the
+  final judgement.)
+
+1.2 Assess situation
+
+The key word here is "detail". This is like a detailed version of
+task 1.1. Specifically, we want to know in more detail information
+on (resources, constraints, assumptions).
+
+OUTPUTS
+
+- Inventory of resources (personnel, data, computing resources,
+  software)
+  
+- Requirements, assumptions and constraints
+
+  So, here I missed a point last project (MD-TP2). I didn't set a
+  schedule of completion, nor of comprehensibility or quality of
+  result or of legal issues. Am I allowed to use the data?
+
+  Assumptions -> these influence the validity of the results. I
+  mean, in the present context (college assignment), there are not
+  many assumptions upon the business. Assumption on the data have to
+  be recorded.
+
+  Constraints -> specially regarding technological contraints
+  (computing power)
+
+- Risks and contingencies
+
+- Terminology. (Does this really need to be done this early in the
+  project?)
+
+  This is divided into business and data mining terminology. I like
+  the idea of illustrating the terminologies with examples.
+
+- Costs and benefits
+
+  This is kind of obvious... Here though, I must assess the
+  cost-benefit relationship from a (time spent)-(knowledge acquired)
+  perspective.
+
+1.3 Determine data mining goals
+
+This is really familiar to me.
+
+1.4 Produce project plan
+
+Anticipated set of steps... initial selection of tools and
+techniques
+
+OUTPUTS
+
+- Project plan
+
+  Should be very detailed.
+  Should be very objective, clear and sound.
+  Is divided by phase.
+  
+  Each phase of the data mining process should be
+  expounded. Something I was doing wrong in previous projects is not
+  to note down risks and counteractions.
+
+
+Phase 2 -- Data understanding
+
+2.1 Collect initial data
+
+List problems and solutions...
+
+"Some knowledge about the data may be on non-electronic sources."
+
+2.2 Describe data
+
+This takes a long time. Here is where we go through the data, plot
+all kinds of things, and so on.
+
+I want to add here that I usually didn't note down the "skewness" of
+the attributes, and should do it. This is an objective way to check
+and report if the data is normally distributed.
+
+The yaml I produced in the last project seems to have been a great
+idea.
+
+Here they also note "update the list of assumptions if necessary"
+
+2.3 Explore data
+
+"Clarify data mining goals or make them more precise"
+
+"perform basic analysis to verify the hypothesis"
+
+2.4 Verify data quality
+
+It is here that we check the data quality, not in cdm-23! Last
+project I bundled almost everything of this phase into task 2.3...
+
+Plausability of values
+
+This should produce a probing report of the data, for usage in the
+next phase (Data preparation).
+
+
+Phase 3 -- Data preparation
+
+Should output a model-ready dataset and its description (the major
+preparatory analysis are done up to this point)
+
+3.1 Select data
+
+3.2 Clean data
+
+Noise in some fields may be insignificant now, but become relevant
+later. So we should document it in an ideal project. In my
+assignments, I will not document them, it takes too much time.
+
+3.3 Construct data
+
+Derived attributes...
+
+It is here that some data is normalized.
+
+Also, missing attributes.
+
+3.4 Integrate data
+
+Mix some attributes into one. This requires creativity.
+
+3.5 Format data
+
+3 categories of changes:
+
+- Rarranging attributes
+- Reordering records
+- Reformatted within-value
+
+Phase 4 -- Modeling
+
+4.1 Select modeling technique
+
+Something new here for me is that the authors mention "perform this
+task for each technique separately". Also, they mention political
+requirements, political requirements (management,
+understandability), and also constraints (these include the actual
+constraints imposed by the data).
+
+4.2 Generate test design
+
+So, unsupervised machine learning does not have a set of labels that
+we can use to test our results on ground truth. Then we should
+define in advance what are the metrics that are going to determine
+the quality of the results, just as CRISP-DM constantly admonishes.
+
+Something interesting, though, is that he mentions that this is
+where we should decide the number of iterations of the testing
+algorithms, the number of folds that will be used for testing (for
+example, 10 fold division would hand 1/10 of the data for testing,
+1/10 for validation and 8/10 for training).
+
+Note that test preparation comes before model fitting, as with any
+good engineering methodology.
+
+4.3 Build model
+
+The output model is useless if a model description is not provided!
+
+We should also report on any difficulties encountered, and any
+parameters used.
+
+4.4 Assess model
+
+Does the model meet the data mining success criteria?
+
+Lift tables & Gain tables
+
+A lot of things to note here. First, there is a ranking and then a
+selection of models. Secondly, there is a need to compare the
+results of the models to common sense, given knowledge base, etc, so
+that one may establish the reliability of the data.
+
+The model may present novel information, but it must certainly be
+questioned when it goes against common sense or field experts
+opinions.
+
+Something else I want to note is that CRISP-DM says "Get insights
+into why a certain modeling technique and certain parameter settings
+lead to good/bad results". Insights are what we are ultimately
+looking for!
+
+Finally, there is a concern on the deployment of the model. At this
+point we are moving to phase 5 of the process, and we should try to
+analyze here the potentials for deployment of each result. That is,
+how can each of the results (even if a simple statistic) be used to
+answer or solve the problems that initially motivated the data
+mining process? Or even, how can they extend our horizons?
+
+There is an iteration of model building... That is really weird.
+
+The difference between this phase and the evaluation phase is that
+in the evaluation phase we seek to determine the exact degree to
+which the model meets the business objectives, and also determine if
+there is some business reason why this model is deficient.
+
+Phase 5 -- Evaluation
+
+RESULTS = MODELS + FINDINGS
+
+FINDINGS!! INSIGHTS!!
+
+Much value is given to the findings. Maybe one will find out that
+there are problems with data, or he might discover new lines of
+approach, or side effects, or new questions, and on goes the list.
+
+The findings are not necessarily related to the business questions.
+
+5.1 Evaluate results
+
+Seems to be a lot like task 4.4
+
+5.2 Review process
+
+"At this point the resultant model appears to be satisfactory and
+appears to satisfy business needs."
+
+"the Process Review takes on the form of a Quality Assurance Review"
+
+Should output process review and give hints for activities that have
+been missed and/or should be repeated.
+
+Concretely, the data mining process should contain the following information:
+
+- Overview of the data mining process
+- Retrospect of each stage of the process, asking the questions "was
+  it necessary? Was it executed optimally"?
+- How could it be improved?
+- Failures
+- Misleading steps
+- Possible alternative actions
+- Actual review of the data mining results with respect to business
+  success criteria.
+
+5.3 Determine next steps
+
+I find it very interesting how they propose "list possible further
+actions along with the reasons for and against each option."
+
+Potential for deployment of each result.
+
+Improvement of current process.
+
+Check if time and budget allow for additional process iterations.
+
+Recommend alternative continuations, so that the project might be
+continuated by some other team in the future.
+
+Choose a course of action, and document it.
+
+Phase 6 -- Deployment
+
+6.1 Plan deployment
+
+Here is where we plan how to put the results of the data mining
+project to work for the organization.
+
+6.2 Plan monitoring and maintenance
+
+Most important is that there is a need for planning monitoring and
+maintenance of the deployed software of model.
+
+"A careful preparation of a maintenance strategy helps to avoid
+unnecessarily long periods of incorrect usage of data mining
+results."
+
+"what things could change in the environment?"
+
+"How will accuracy be monitored?" - I hadn't thought about this at
+all!
+
+"When should the data mining result or model not be used any more?"
+
+Will the business objectives of the use of the model change over
+time?
+
+6.3 Produce final report
+
+"At the end of the project, there will be (at least one) final
+report where all the threads are brought together."
+
+There is always a great care with maintenability of the results.
+
+"The actual detailed content of the report depends very much on the
+audience for the particular report."
+
+What kind of reports are needed...
+
+Target groups.
+Report structure and contents.
+Findings to be included.
+Writing.
+
+There is also a project presentation.
+
+An interesting question is "will the targets of the presentation
+already have received the report?"
+
+6.4 Review project
+
+Interview people involved in the project.
+
+Ask if the people using the deployed result are satisfied.
+
+"Abstract from details to make the experience useful for future
+projects"

@@ -1,0 +1,162 @@
+2021-03-06
+Alexander Thomas Mol Holmquist
+
+MD-TP3 project plan, as underlined by CRISP-DM
+--------------------------------------------------------------------
+
+This plan relates to the MD-TP3 project. Our business and data
+mining objectives can be easily found in the directory for
+documenting the CRISP-DM course of this project,
+"<root>/doc/cdm". It is divided by phases, according to CRISP-DM,
+and is to be detailed, objective, clear and sound. For each phase,
+we present the steps to be taken, potential risks, and reactive
+solutions that might be taken.
+
+The duration of the project is of 12 days, starting on 2021-03-03,
+and ending on 2021-03-15. Other information is ommited here due to
+the expected simplicity and brevity of the project, and may be found
+in the documentation for some CRISP-DM tasks, specially those of
+phase 1 (business undersanding).
+
+--------------------------------------------------------------------
+
+Phase 1. Loading data
+
+Load data into a jupyter notebook.
+
+Check if the data is usable.
+
+Check if the data requires special treatment due to its size.
+
+Check if data has special properties that should be taken advantage
+of.
+
+Risk 1. The first risk that I can foresee is a data quality
+issue. If this happens to be too severe, I should look for another
+dataset, or try to collect the photos from the origin by myself.
+
+Risk 2. My simple computer might not be able to deal with the large
+amount of data (~170 MB) of the current chosen dataset. If that
+happens, I should try to look for alternative models. One special
+concern is the memory space taken by the modeling technique. For
+example, it probably is completely impractical to create a kernel
+matrix, which already reduces the range of feasible models.
+
+Phase 2. Describe data
+
+1. Try to collect a handful of useful statistics, like the mean,
+variance, skewness, kurtosis, etc.
+
+2. Try dimensionality reduction for plotting.
+
+3. Explore the data! Maybe create some hypothesis. This step
+shouldn't take too long. The main point is to create insights.
+
+4. Create a report of considered tools and techniques
+
+Outputs:
+
+- Data description jupyter notebook
+- Initial tools and techniques report
+
+Phase 3. Prepare data
+
+I expect this specific dataset to be quite clean. However, some data
+preparation must be done.
+
+1. Make sure that all of the values lie on the range of possible
+pixel values.
+
+2. Try to compress the data -- keep like 95% variance at first. If
+that is not possible, try to get less variance.
+
+3. Check if any images can be ignored
+
+4. Check if it is a good idea to create artificial examples, like
+things like rotations, that might increase a little the accuracy.
+
+5. Check if it is a good idea to normalize the data. If it is, then
+do it.
+
+6. Make sure that the data is in a format that can be used by the
+considered modeling techniques.
+
+Risk 1. Data quality is too poor, in a way that we hadn't predicted
+before (that is, it is not able to help us in achieving the business
+objectives). In this case, look for some better dataset.
+
+Outputs:
+
+Data preparation report -- should include decisions made, insights,
+as well as problems with data quality.
+
+Phase 4. Modeling
+
+This is where I will try to fit a model onto the data.
+
+1. Select a modeling technique, verify if it matches the one
+proposed on phase 2.
+
+2. Considering that we have a supervised learning problem, figure
+out how many folds are going to be used for test/validation. Check
+if the folding already given by Kaggle is a good choice. Argue for
+the choice in the modeling report.
+
+3. Define exactly how to tune the metaparameters of the modeling
+technique.
+
+4. Build the model and fit the data. Write model description in
+modeling report.
+
+5. Assess the model. How good is the proposed model? Can we do
+better? If we chose many models, construct a ranking and choose the
+best model. Does the model actually help us meet the data mining
+success criteria? Build lift tables and gain tables to help
+answering this question.
+
+6. Analyze the potential of the model from the deployment
+perspective.
+
+Outputs:
+
+Model assessment report -- contains everything done here, the model
+chosen, the parameters chosen along with the reason why, the need
+for further iterations, etc.
+
+
+Phase 5. Evaluation
+
+1. Evaluate results. Check if we need to iterate back into some
+step.
+
+2. Review everything (at this point, the model appears to be
+satisfactory). This step is like a quality assurance review. There
+is an overview and retrospect of the data mining process that needs
+to be done. Questions like "how could it be improved?" detection of
+failures, misleading steps, alternative actions, success according
+to settled business criteria, etc, are all questions that should be
+answered here.
+
+3. Determine next steps. What should we do now? Head on to
+deployment, or write an extensive report, or a paper? Do the
+insights reveal some new alternative path? A new project to be
+started? Each proceeding option should come with pros and cons list.
+
+Outputs:
+
+- Evaluation report
+
+
+Phase 6. Deployment
+
+This is NOT where we check if our model is good or not. That is done
+in phase 5. Reflections on success or failure come only from phase
+5, because we don't have a way to ask deployment users for feedback.
+
+1. Write the final report
+
+Outputs:
+
+- Final report: should make a merge of everything done up to this
+  point. Go through each small report and try to put everything
+  together in the final report.

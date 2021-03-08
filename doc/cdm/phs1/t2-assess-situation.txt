@@ -1,0 +1,32 @@
+2021-03-03/2021-03-06
+Alexander Thomas Mol Holmquist
+
+MD-TP3 project task 2 of phase 1 of CRISP-DM
+--------------------------------------------------------------------
+
+Schedule of completion: 2021-03-15
+
+The dataset is public, it comes from the link "data_source", that
+may be found in the file "<root>/doc/useful-links.txt".
+
+I decided to generate a small yaml file with the metadata of the
+dataset, concretely the source, original publisher, that kind of
+stuff. This way, if one need this kind of information, they may
+easily encouter them in the said yaml file.
+
+The biggest constraints are listed below:
+
+1. Lack of knowledge in the skin cancer field, and lack of available
+technical personell
+
+2. Hardware -- the dataset is quite big, my computer might not be
+able to handle it.
+
+Assumptions:
+
+- Data is correct
+
+- Collected data from Kaggle has been uniformely selected from
+  origin
+
+- Data is sufficient for our purpose of defining a malign cancer

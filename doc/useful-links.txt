@@ -1,0 +1,6 @@
+dataset: "https://www.kaggle.com/fanconic/skin-cancer-malignant-vs-benign"
+dataset_source: "https://www.isic-archive.com/#!/topWithHeader/wideContentTop/main"
+sbd_cancer: "https://www.sbd.org.br/dermatologia/pele/doencas-e-problemas/cancer-da-pele/64/"
+stanford_paper: "https://www.nature.com/articles/nature21056"
+isic_history: "https://www.isic-archive.com/#!/topWithHeader/tightContentTop/about/isicArchive"
+

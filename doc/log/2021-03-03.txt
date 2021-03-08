@@ -1,0 +1,30 @@
+2021-03-03/2021-03-04
+Alexander Thomas Mol Holmquist
+
+MD-TP3 project plan
+--------------------------------------------------------------------
+
+This document tries to settle a plan for the MD-TP3 project,
+according to CRISP-DM directives, and past experience.
+
+First off, I must follow the CRISP-DM guidelines. These have proven
+to be extremely useful and realistic. Don't be fooled into thinking
+you have a better template.
+
+We then have 6 phases, each one with a few tasks. Each one of these
+must be done in order (with necessary iterations). The phases are:
+
+1. Business understanding
+2. Data understanding
+3. Data preparation
+4. Modeling
+5. Evaluation
+6. Deployment
+
+Let's first establish what our past experience is with each task,
+and then we can move to the first phase which includes the making of
+the initial plan. The past experience report is in the file
+"<root>/doc/cdm/past-exp-report.txt"
+
+I plan to include the first phase progress in the directory
+"<root>/doc/cdm/phs1".
