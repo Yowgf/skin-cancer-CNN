@@ -1,0 +1,17 @@
+2021-03-11
+Alexander Thomas Mol Holmquist
+
+Notes on findings on our dataset, while trying to start phase 1 of
+the project.
+--------------------------------------------------------------------
+
+The data is actually quite big, and needs to occupy approximately
+150228 * 1600 bytes in the full matrix. So there is a very real
+concern with memory, and how we treat the main data matrix. It also
+has serious implications on the methods we will be able to use.
+
+For a starter, we can say that dimensionality reduction is
+absolutely necessary. Also, it is important to remember that the
+pixels values range from 0 to 255, and so only ONE BYTE is necessary
+for each. Using more than one byte per pixel might slow down
+everything drastically.
