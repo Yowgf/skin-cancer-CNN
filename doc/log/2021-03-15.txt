@@ -1,0 +1,11 @@
+2021-03-11
+Alexander Thomas Mol Holmquist
+
+Today I will try to end the project
+--------------------------------------------------------------------
+
+Must strictly follow the initial project plan. Stick to it!
+
+How to verify fundamental assumptions on the data, if I manipulated
+it? The thing is, this step is kind of dumb, considering we are
+dealing with images.

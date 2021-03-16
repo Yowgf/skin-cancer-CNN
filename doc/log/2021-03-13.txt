@@ -1,0 +1,22 @@
+2021-03-13
+Alexander Thomas Mol Holmquist
+
+Notes on the day in which I plan to complete the first phase of the
+MD-TP3 project.
+--------------------------------------------------------------------
+
+The data doesn't need to be rescaled, since all the pixels values
+lie in the range [0, 255].
+
+I decided to sample the image with 4x4 blocks. The current size of
+the data is intractible for the sklean's PCA algorithm, and also for
+my algoritm (buildReDf). The memory and CPU consumed is simply too
+high.
+
+For that, I built the function sampleImages(), in the file
+"<root>/pysrc/phs1.py". Now, loadImgDataset returns should return
+the classes and the sample data, in a tuple.
+
+The next question that needs an answer is: how do I put everything
+into a single 2d dataset?
+
