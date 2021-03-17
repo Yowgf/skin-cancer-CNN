@@ -6,11 +6,12 @@ import numpy as np
 import os
 import pandas as pd
 import re
+import shutil
 from skimage import io
 
 # Get image file names
 def getBenMalFiles(trainTest):
-    if trainTest not in {"train", "test"}:
+    if trainTest not in {"train", "validation", "test"}:
         raise AttributeError("Invalid argument ***" + trainTest +
                              "*** only options are 'train' and 'test'")
     
@@ -20,6 +21,59 @@ def getBenMalFiles(trainTest):
     mal_files = np.sort(os.listdir(mal_dir))
     
     return ben_dir, mal_dir, ben_files, mal_files
+
+# Makes sure that there is a folder named validation. If there is
+# not, it assumes that currently there is a 9/1 ten-fold division
+# between training and testing sets only. It then creates a new
+# validation set from the training set.
+def getSuffixName(filePath): # Simple aux function
+    i = len(filePath) - 1
+    while filePath[i] != "/":
+        i -= 1
+    
+    return filePath[i+1:] # Dont include the "/"
+
+def buildValidationSet():
+    validation_dir = "data/validation"
+    val_ben_dir = validation_dir + "/benign"
+    val_mal_dir = validation_dir + "/malignant"
+    try:
+        os.listdir(validation_dir)
+        os.listdir(val_ben_dir)
+        os.listdir(val_mal_dir)
+    
+    except FileNotFoundError: # Then we must make one!
+        # Create the validation directory and its children
+        os.mkdir(validation_dir)
+        os.mkdir(val_ben_dir)
+        os.mkdir(val_mal_dir)
+        
+        # Build a new validation set from the training set
+        ben_dir, mal_dir, ben_files, mal_files = getBenMalFiles("train")
+
+        ben_files_path = [ben_dir + fname for fname in ben_files]
+        mal_files_path = [mal_dir + fname for fname in mal_files]
+        
+        # Fetch the subset of files wanted
+        cut_ratio = 1 / 4
+        ben_cut_size = round(cut_ratio * len(ben_files))
+        mal_cut_size = round(cut_ratio * len(mal_files))
+        # Original file paths of the chosen validation subset
+        np.random.shuffle(ben_files_path)
+        np.random.shuffle(mal_files_path)
+        val_ben_files = ben_files_path[:ben_cut_size]
+        val_mal_files = mal_files_path[:mal_cut_size]
+
+        # Destination file paths
+        val_ben_destp = [val_ben_dir + "/" + getSuffixName(f) for f in val_ben_files]
+        val_mal_destp = [val_mal_dir + "/" + getSuffixName(f) for f in val_mal_files]
+
+        # Move those files to the validation directories
+        # This didnt quite work
+        for i in range(len(val_ben_files)):
+            shutil.move(val_ben_files[i], val_ben_destp[i])
+        for i in range(len(val_mal_files)):
+            shutil.move(val_mal_files[i], val_mal_destp[i])
 
 # Fetch image files prefixes
 def sortByNumPrefix(fileNames):
@@ -89,8 +143,6 @@ def prod(arr):
     return acc
 
 # Does all the loading process
-# Returns the column of labels of the dataset, along with the
-# block-sampled images.
 def loadImgDataset(trainTest):
     benImgList, malImgList = getBenMalImgList(trainTest)
 
@@ -104,6 +156,13 @@ def loadImgDataset(trainTest):
     dataset[benSize:] = np.array(malImgList)
 
     classes = np.array(np.append(np.repeat(0, benSize), np.repeat(1, malSize)))
+
+    return classes, dataset
+
+# In addition to the common loading process, it block-samples images.
+def loadSampImgDataset(trainTest):
+    classes, dataset = loadImgDataset(trainTest)
+
     sampData = sampleImages(dataset)
     
     # Flatten the data into a 2D array.
